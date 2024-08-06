@@ -36,7 +36,18 @@ const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 // Finally, log the results.
 console.log(isValid);
 
-const isDivisible = (n1%5) > 0 && (n2%5) > 0 && (n3%5) > 0 && (n4%5) > 0;
+// Here's another example of how this COULD be done,
+// but it SHOULD NOT be done this way. As programmers,
+// we break things into small, manageable pieces so that
+// they can be better understood, scaled, and maintained.
+const dontDoThis = ((n1 + n2 + n3 + n4) == 50) && 
+  ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
+  !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
+  (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+
+
+//Lab Part 1
+const isDivisible = (n1%5) > 0 && (n2%5) > 0 && (n3%5) > 0 &&(n4%5) > 0;
 console.log(isDivisible);
 
 const isLarger = n4 > n1;
@@ -47,11 +58,19 @@ console.log(chain);
 
 const isOver25True = n1 < 25 || n2 < 25 || n3 < 25 || n4 < 25;
 console.log(isOver25True)
-// Here's another example of how this COULD be done,
-// but it SHOULD NOT be done this way. As programmers,
-// we break things into small, manageable pieces so that
-// they can be better understood, scaled, and maintained.
-const dontDoThis = ((n1 + n2 + n3 + n4) == 50) && 
-  ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
-  !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
-  (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+
+//Lab Part 2
+  
+const maxtotalFuel = 1500 / 23;
+console.log(maxtotalFuel);
+const mintotalFuel = 1500 / 30;
+console.log(mintotalFuel)
+const maxBudget = maxtotalFuel * 3;
+console.log(maxBudget);
+const minBudget = mintotalFuel * 3;
+console.log(minBudget);
+const midtotalFuel = 1500 / 28;
+console.log(midtotalFuel);
+const midBudget = midtotalFuel * 3;
+console.log(midtotalFuel);
+console.log("Drive at 60 miles per hour.");
