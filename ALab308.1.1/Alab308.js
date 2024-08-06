@@ -62,15 +62,24 @@ console.log(isOver25True)
 //Lab Part 2
   
 const maxtotalFuel = 1500 / 23;
-console.log(maxtotalFuel);
-const mintotalFuel = 1500 / 30;
-console.log(mintotalFuel)
+console.log("Fuel Consumption at 75 mph: " + maxtotalFuel);
 const maxBudget = maxtotalFuel * 3;
-console.log(maxBudget);
+console.log("Costs: " + maxBudget);
+const minTime = 1500 / 75;
+console.log("Time at 75 miles per hour: " + minTime);
+
+const mintotalFuel = 1500 / 30;
+console.log("Fuel Consumption at 55 mph: " +mintotalFuel)
 const minBudget = mintotalFuel * 3;
-console.log(minBudget);
+console.log("Costs: " + minBudget);
+const maxTime = 1500 / 55;
+console.log("Time at 55 miles per hour: " + maxTime);
+
 const midtotalFuel = 1500 / 28;
-console.log(midtotalFuel);
+console.log("Fuel Consumption at 60 mph: " +midtotalFuel);
 const midBudget = midtotalFuel * 3;
-console.log(midtotalFuel);
-console.log("Drive at 60 miles per hour.");
+console.log("Costs: " + midBudget);
+const midTime = 1500 / 60;
+console.log("Time at 60 miles per hour: " + midTime);
+
+console.log("Drive at 60 mph. You'll save more money and arrive at the destination faster. Driving at 75 mph isn't even affordable.");
